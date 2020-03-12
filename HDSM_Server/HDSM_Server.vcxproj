@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{d979e8ff-3d7d-4546-943e-3d367c33eb21}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>HDSM_Server</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(MSBuildProjectName)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutDir>$(SolutionDir)$(MSBuildProjectName)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(MSBuildProjectName)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="ConfigureMgr.cpp" />
+    <ClCompile Include="Data\BufferPool.cpp" />
+    <ClCompile Include="Data\HDLinkedList.cpp" />
+    <ClCompile Include="Data\HDLinkedListExpireCache.cpp" />
+    <ClCompile Include="Data\HDLinkedListIndex.cpp" />
+    <ClCompile Include="Data\HDLinkedListNode.cpp" />
+    <ClCompile Include="Data\HDSimpleMap.cpp" />
+    <ClCompile Include="Data\HDSMInitThread.cpp" />
+    <ClCompile Include="Data\TrimExpireThread.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="HDSMSrv.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Server\Connection.cpp" />
+    <ClCompile Include="Server\ConnectionPool.cpp" />
+    <ClCompile Include="Server\OplogManager.cpp" />
+    <ClCompile Include="Server\OplogSynchronizer.cpp" />
+    <ClCompile Include="Server\OplogSyncThread.cpp" />
+    <ClCompile Include="Server\OplogWriteThread.cpp" />
+    <ClCompile Include="Server\Task.cpp" />
+    <ClCompile Include="Server\TaskCenter.cpp" />
+    <ClCompile Include="Server\TaskServer.cpp" />
+    <ClCompile Include="Server\WorkThread.cpp" />
+    <ClCompile Include="TestThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigureMgr.h" />
+    <ClInclude Include="Data\BufferPool.h" />
+    <ClInclude Include="Data\HDLinkedList.h" />
+    <ClInclude Include="Data\HDLinkedListExpireCache.h" />
+    <ClInclude Include="Data\HDLinkedListIndex.h" />
+    <ClInclude Include="Data\HDLinkedListNode.h" />
+    <ClInclude Include="Data\HDSimpleMap.h" />
+    <ClInclude Include="Data\HDSMInitThread.h" />
+    <ClInclude Include="Data\HDSMOperateType.h" />
+    <ClInclude Include="Data\IHDLinkedList.h" />
+    <ClInclude Include="Data\IHDSMEventHandler.h" />
+    <ClInclude Include="Data\TrimExpireThread.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Server\Connection.h" />
+    <ClInclude Include="Server\ConnectionPool.h" />
+    <ClInclude Include="Server\IOplogManager.h" />
+    <ClInclude Include="Server\ITaskCenter.h" />
+    <ClInclude Include="Server\ITaskNotify.h" />
+    <ClInclude Include="Server\OplogManager.h" />
+    <ClInclude Include="Server\OplogSynchronizer.h" />
+    <ClInclude Include="Server\OplogSyncThread.h" />
+    <ClInclude Include="Server\OplogWriteThread.h" />
+    <ClInclude Include="Server\Task.h" />
+    <ClInclude Include="Server\TaskCenter.h" />
+    <ClInclude Include="Server\TaskServer.h" />
+    <ClInclude Include="Server\WorkThread.h" />
+    <ClInclude Include="TestThread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HDSM.ini" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalOptions>-lrt -lpthread</AdditionalOptions>
+      <AdditionalDependencies>./projects/HDSM_Base_lib/bin/x64/Debug/libHDSM_Base_lib.a;$(StlAdditionalDependencies);%(Link.AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../HDSM_Base_lib;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Link>
+      <AdditionalOptions>-lrt -lpthread</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalOptions>-lrt -lpthread</AdditionalOptions>
+      <AdditionalDependencies>./projects/HDSM_Base_lib/bin/x64/Release/libHDSM_Base_lib.a;$(StlAdditionalDependencies);%(Link.AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../HDSM_Base_lib;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

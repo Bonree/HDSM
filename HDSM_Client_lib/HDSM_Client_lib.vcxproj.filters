@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="HDSMClientLib">
+      <UniqueIdentifier>{6ec6f547-79e3-45ef-8d79-d1891cd18256}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HDSMClientLib\HDSMClient.cpp">
+      <Filter>HDSMClientLib</Filter>
+    </ClCompile>
+    <ClCompile Include="HDSMClientLib\HDSMClientImpl.cpp">
+      <Filter>HDSMClientLib</Filter>
+    </ClCompile>
+    <ClCompile Include="HDSMClientLib\Result.cpp">
+      <Filter>HDSMClientLib</Filter>
+    </ClCompile>
+    <ClCompile Include="HDSMClientLib\ResultImpl.cpp">
+      <Filter>HDSMClientLib</Filter>
+    </ClCompile>
+    <ClCompile Include="HDSMClientLib\Task.cpp">
+      <Filter>HDSMClientLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HDSMClientLib\HDSMClient.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+    <ClInclude Include="HDSMClientLib\HDSMClientImpl.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+    <ClInclude Include="HDSMClientLib\HDSMOperateType_c.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+    <ClInclude Include="HDSMClientLib\Result.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+    <ClInclude Include="HDSMClientLib\ResultImpl.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+    <ClInclude Include="HDSMClientLib\Task.h">
+      <Filter>HDSMClientLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

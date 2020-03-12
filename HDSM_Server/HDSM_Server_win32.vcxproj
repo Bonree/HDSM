@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConfigureMgr.cpp" />
+    <ClCompile Include="Data\BufferPool.cpp" />
+    <ClCompile Include="Data\HDLinkedList.cpp" />
+    <ClCompile Include="Data\HDLinkedListExpireCache.cpp" />
+    <ClCompile Include="Data\HDLinkedListIndex.cpp" />
+    <ClCompile Include="Data\HDLinkedListNode.cpp" />
+    <ClCompile Include="Data\HDSimpleMap.cpp" />
+    <ClCompile Include="Data\HDSMInitThread.cpp" />
+    <ClCompile Include="Data\TrimExpireThread.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="HDSMSrv.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Server\Connection.cpp" />
+    <ClCompile Include="Server\ConnectionPool.cpp" />
+    <ClCompile Include="Server\OplogManager.cpp" />
+    <ClCompile Include="Server\OplogSynchronizer.cpp" />
+    <ClCompile Include="Server\OplogSyncThread.cpp" />
+    <ClCompile Include="Server\OplogWriteThread.cpp" />
+    <ClCompile Include="Server\Task.cpp" />
+    <ClCompile Include="Server\TaskCenter.cpp" />
+    <ClCompile Include="Server\TaskServer.cpp" />
+    <ClCompile Include="Server\WorkThread.cpp" />
+    <ClCompile Include="TestThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigureMgr.h" />
+    <ClInclude Include="Data\BufferPool.h" />
+    <ClInclude Include="Data\HDLinkedList.h" />
+    <ClInclude Include="Data\HDLinkedListExpireCache.h" />
+    <ClInclude Include="Data\HDLinkedListIndex.h" />
+    <ClInclude Include="Data\HDLinkedListNode.h" />
+    <ClInclude Include="Data\HDSimpleMap.h" />
+    <ClInclude Include="Data\HDSMInitThread.h" />
+    <ClInclude Include="Data\HDSMOperateType.h" />
+    <ClInclude Include="Data\IHDLinkedList.h" />
+    <ClInclude Include="Data\IHDSMEventHandler.h" />
+    <ClInclude Include="Data\TrimExpireThread.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Server\Connection.h" />
+    <ClInclude Include="Server\ConnectionPool.h" />
+    <ClInclude Include="Server\IOplogManager.h" />
+    <ClInclude Include="Server\ITaskCenter.h" />
+    <ClInclude Include="Server\ITaskNotify.h" />
+    <ClInclude Include="Server\OplogManager.h" />
+    <ClInclude Include="Server\OplogSynchronizer.h" />
+    <ClInclude Include="Server\OplogSyncThread.h" />
+    <ClInclude Include="Server\OplogWriteThread.h" />
+    <ClInclude Include="Server\Task.h" />
+    <ClInclude Include="Server\TaskCenter.h" />
+    <ClInclude Include="Server\TaskServer.h" />
+    <ClInclude Include="Server\WorkThread.h" />
+    <ClInclude Include="TestThread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HDSM.ini" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{62A12CF3-7ED4-493B-B00B-B69210F968AB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HDSM_Server_win32</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../HDSM_Base_lib;../HDSM_Client_lib/HDSMClientLib;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(OutDir)HDSM_Base_lib_win32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../HDSM_Base_lib;../HDSM_Client_lib/HDSMClientLib;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(OutDir)HDSM_Base_lib_win32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

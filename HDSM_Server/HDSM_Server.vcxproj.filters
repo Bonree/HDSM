@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="data">
+      <UniqueIdentifier>{044e1506-a1e1-4571-8c4c-1f8dcc40fd60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{81f8fb02-39d6-4a18-9d9a-36f54f9a5d29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Data\BufferPool.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDLinkedList.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDLinkedListExpireCache.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDLinkedListIndex.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDLinkedListNode.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDSimpleMap.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\HDSMInitThread.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\TrimExpireThread.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Connection.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\ConnectionPool.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\OplogManager.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\OplogSynchronizer.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\OplogSyncThread.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\OplogWriteThread.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Task.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\TaskCenter.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\TaskServer.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\WorkThread.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigureMgr.cpp" />
+    <ClCompile Include="HDSMSrv.cpp" />
+    <ClCompile Include="TestThread.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Logger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data\BufferPool.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDLinkedList.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDLinkedListExpireCache.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDLinkedListIndex.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDLinkedListNode.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDSimpleMap.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDSMInitThread.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\HDSMOperateType.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\IHDLinkedList.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\IHDSMEventHandler.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\TrimExpireThread.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Connection.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\ConnectionPool.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\IOplogManager.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\ITaskCenter.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\ITaskNotify.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\OplogManager.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\OplogSynchronizer.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\OplogSyncThread.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\OplogWriteThread.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Task.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\TaskCenter.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\TaskServer.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WorkThread.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigureMgr.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="TestThread.h" />
+    <ClInclude Include="Logger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HDSM.ini" />
+  </ItemGroup>
+</Project>
